@@ -1,4 +1,4 @@
-import {Http} from 'http/http';
+import {Http} from 'angular2/http';
 import {Movie} from '../models/movie';
 
 //Magically make DI work

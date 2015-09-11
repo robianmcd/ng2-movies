@@ -1,0 +1,49 @@
+<div id="movie-details" *ng-if="movie">
+    <h1 class="text-center">{{movie.title}}</h1>
+    <div class="row">
+        <div class="col-xs-5">
+            <img class="movie-poster" [src]="movie.posterUrl">
+        </div>
+        <div class="col-xs-7">
+            <table class="table">
+                <tr>
+                    <td><strong>Plot</strong></td>
+                    <td>{{movie.plot}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Rated</strong></td>
+                    <td>{{movie.rating}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Released</strong></td>
+                    <td>{{movie.getFormattedDate()}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Runtime</strong></td>
+                    <td>{{movie.lengthInMinutes}}m</td>
+                </tr>
+                <tr>
+                    <td><strong>Genre</strong></td>
+                    <td>{{movie.genre}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Actors</strong></td>
+                    <td>
+                        <ul class="list-unstyled">
+                            <li *ng-for="#actor of movie.actors">{{actor}}</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>IMDB Rating</strong></td>
+                    <td>{{movie.imdbRating}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class=buttons>
+            <a class="btn btn-primary" [router-link]="['/home']">Back</a>
+        </div>
+    </div>
+</div>

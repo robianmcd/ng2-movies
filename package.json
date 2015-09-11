@@ -1,0 +1,13 @@
+{
+  "name": "ng2-movies",
+  "version": "1.0.0",
+  "description": "Sample Angular 2 app",
+  "scripts": {
+    "start": "npm install && gulp"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+    "gulp": "~3.9.0",
+    "gulp-typescript": "~2.8.1"
+  }
+}

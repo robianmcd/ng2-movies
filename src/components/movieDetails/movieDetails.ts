@@ -7,8 +7,9 @@ import {Movie} from '../../models/movie';
     selector: 'movieDetails'
 })
 @View({
+    directives: [RouterLink, NgIf, NgFor],
     templateUrl: 'components/movieDetails/movieDetails.html',
-    directives: [RouterLink, NgIf, NgFor]
+    styleUrls: ['components/movieDetails/movieDetails.css']
 })
 export class MovieDetails {
     movie: Movie;

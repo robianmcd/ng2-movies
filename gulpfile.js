@@ -10,7 +10,7 @@ var paths = {
 gulp.task('ts', function () {
     return gulp.src(paths.ts)
         .pipe(ts({
-            'module': 'umd',
+            'module': 'commonjs',
             'experimentalDecorators': true,
             'emitDecoratorMetadata': true,
             'target': 'ES5'
@@ -31,4 +31,5 @@ gulp.task('styles', function () {
 gulp.task('default', ['ts', 'templates', 'styles'], function () {
     gulp.watch(paths.ts, ['ts']);
     gulp.watch(paths.templates, ['templates']);
+    gulp.watch(paths.styles, ['styles']);
 });

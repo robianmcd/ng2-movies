@@ -9,7 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="angular2.dev" level="application" />
     <orderEntry type="library" name="router.dev" level="application" />
-    <orderEntry type="library" name="system" level="application" />
     <orderEntry type="library" name="ng2-movies node_modules" level="project" />
     <orderEntry type="library" name="system@0.16.11" level="application" />
     <orderEntry type="library" name="fetch" level="application" />
@@ -31,5 +30,7 @@
     <orderEntry type="library" name="system.src" level="application" />
     <orderEntry type="library" name="angular2" level="application" />
     <orderEntry type="library" name="http" level="application" />
+    <orderEntry type="library" name="system.src" level="application" />
+    <orderEntry type="library" name="http.dev" level="application" />
   </component>
 </module>

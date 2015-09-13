@@ -2,6 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{ng2-movies node_modules}" />
-    <file url="PROJECT" libraries="{angular2.dev, core, fetch, moment, router.dev, system@0.16.11, traceur-runtime}" />
+    <file url="PROJECT" libraries="{angular2.dev, core, fetch, http.dev, moment, router.dev, system.src, system@0.16.11, traceur-runtime}" />
   </component>
 </project>

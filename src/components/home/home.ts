@@ -8,39 +8,64 @@ import {Movie} from "../../models/movie";
     selector: 'home'
 })
 @View({
+    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink],
     template: `
-<div>
-    <h1 class="text-center">Movie Database</h1>
+        <div>
+            <h1 class="text-center">Movie Database</h1>
 
-    <form class="form-inline">
-        <div class="form-group">
-          <label for="search">Search</label>
-          <input [(ng-model)]="search" type="text" class="form-control" id="test">
-        </div>
-    </form>
+            <form class="form-inline">
+                <div class="form-group">
+                  <label for="search">Search</label>
+                  <input [(ng-model)]="search" type="text" class="form-control" id="test">
+                </div>
+            </form>
 
-    <div *ng-if="movies">
-        <div *ng-for="#movie of getFilteredMovies()" class="media movie-list-item" [router-link]="['/movieDetails', {movieId: movie.id}]">
-            <div class="media-left">
-                <div class="poster-container">
-                    <img class="media-object movie-poster" [src]="movie.posterUrl">
+            <div *ng-if="movies">
+                <div *ng-for="#movie of getFilteredMovies()" class="media movie-list-item" [router-link]="['/movieDetails', {movieId: movie.id}]">
+                    <div class="media-left">
+                        <div class="poster-container">
+                            <img class="media-object movie-poster" [src]="movie.posterUrl">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{movie.title}} <span class="badge">{{movie.imdbRating}}</span></h4>
+
+                        <div>
+                            {{movie.plot}}
+                        </div>
+                        <div class="released-date">
+                            Released: {{movie.getFormattedDate()}}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="media-body">
-                <h4 class="media-heading">{{movie.title}} <span class="badge">{{movie.imdbRating}}</span></h4>
-
-                <div>
-                    {{movie.plot}}
-                </div>
-                <div class="released-date">
-                    Released: {{movie.getFormattedDate()}}
-                </div>
-            </div>
         </div>
-    </div>
-</div>
     `,
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
+    styles: [`
+        .movie-list-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .movie-list-item:hover {
+            background-color: #eee;
+        }
+
+        .movie-list-item .poster-container {
+            height: 200px;
+            width: 150px;
+        }
+
+        .movie-poster {
+            max-height: 200px;
+            max-width: 150px;
+        }
+
+        .released-date {
+            margin-top: 20px;
+        }
+    `]
+
 })
 export class Home {
     movies:Movie[];
@@ -50,7 +75,7 @@ export class Home {
         movieApi.getMovies().then((movies) => {
             this.movies = movies;
         });
-        
+
         //movieApi.getMoviesRx().subscribe(movies => {
         //    this.movies = movies
         //});

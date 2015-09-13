@@ -4,7 +4,7 @@ To run it execute the following
 ```Bash
 npm install
 gulp
-#in another terminate:
+#in another terminal:
 node server.js
 ```
 

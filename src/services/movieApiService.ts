@@ -1,13 +1,10 @@
 import {Http} from 'angular2/http';
 import {Movie} from '../models/movie';
+import {Injectable} from 'angular2/di';
 
-//Magically make DI work
-var Magic = () => () => {};
-
-@Magic()
+@Injectable()
 export class MovieApi {
     constructor(private http:Http) {
-
     }
 
     getMovies():Promise<Movie[]> {

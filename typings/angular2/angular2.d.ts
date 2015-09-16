@@ -12214,3 +12214,8 @@ declare module "angular2/web_worker/ui" {
 declare module "angular2/forms" {
     const FORM_DIRECTIVES:any[]
 }
+
+declare module "angular2/di" {
+    const Injectable
+
+}

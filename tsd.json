@@ -5,29 +5,14 @@
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
-    "es6-promise/es6-promise.d.ts": {
-      "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
-    },
-    "rx/rx.d.ts": {
-      "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
-    },
-    "angular2/angular2.d.ts": {
-      "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
-    },
-    "rx/rx-lite.d.ts": {
-      "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
-    },
-    "angular2/router.d.ts": {
-      "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
-    },
-    "whatwg-fetch/whatwg-fetch.d.ts": {
-      "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
-    },
     "moment/moment.d.ts": {
       "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
     },
     "moment/moment-node.d.ts": {
       "commit": "a461a243e2e09b213bc49d12650f80d81047576d"
+    },
+    "whatwg-fetch/whatwg-fetch.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
     }
   }
 }

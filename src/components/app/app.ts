@@ -1,7 +1,7 @@
 import {Component, View} from 'angular2/angular2';
-import {RouteConfig, RouterOutlet} from 'angular2/router';
-import {Home} from 'components/home/home';
-import {MovieDetails} from 'components/movieDetails/movieDetails';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Home} from "../home/home";
+import {MovieDetails} from '../movieDetails/movieDetails';
 
 @Component({
     selector: 'app'
@@ -12,16 +12,12 @@ import {MovieDetails} from 'components/movieDetails/movieDetails';
             <router-outlet></router-outlet>
         </div>
     `,
-    directives: [RouterOutlet]
+    directives: [ROUTER_DIRECTIVES, Home, MovieDetails]
 })
 @RouteConfig([
-    { path: '/', component: Home, as: 'home'},
-    { path: '/details/:movieId', component: MovieDetails, as: 'movieDetails' }
+    { path: '/', component: Home, as: 'Home'},
+    { path: '/details/:movieId', component: MovieDetails, as: 'MovieDetails' }
 ])
 export class App {
-    test: string;
 
-    constructor() {
-
-    }
 }

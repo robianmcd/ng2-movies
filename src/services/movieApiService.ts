@@ -1,6 +1,7 @@
 import {Http} from 'angular2/http';
 import {Movie} from '../models/movie';
-import {Injectable} from 'angular2/di';
+import {Injectable} from 'angular2/core';
+import {Observable} from "../../node_modules/angular2/src/core/facade/async";
 
 @Injectable()
 export class MovieApi {
@@ -21,18 +22,16 @@ export class MovieApi {
             .then(movie => this.parseMovieData(movie));
     }
 
-    getMoviesRx(): Rx.IObservable<Movie[]> {
+    getMoviesRx() {
         return this.http.get('/api/movies')
-            .toRx()
             .map(response => response.json())
             .map((movies) => {
                 return movies.map(movie => this.parseMovieData(movie));
             });
     }
 
-    getMovieByIdRx(id): Rx.IObservable<Movie> {
+    getMovieByIdRx(id) {
         return this.http.get(`/api/movies/${id}`)
-            .toRx()
             .map(response => response.json())
             .map(movie => this.parseMovieData(movie));
     }

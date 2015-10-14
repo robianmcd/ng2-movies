@@ -8,6 +8,6 @@
   "dependencies": {
     "express": "^4.13.3",
     "gulp": "~3.9.0",
-    "gulp-typescript": "~2.8.1"
+    "gulp-typescript": "2.9.2"
   }
 }

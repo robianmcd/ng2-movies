@@ -1,5 +1,5 @@
 import {Component, View, CORE_DIRECTIVES} from 'angular2/angular2';
-import {FORM_DIRECTIVES} from 'angular2/forms';
+import {FORM_DIRECTIVES} from 'angular2/core';
 import {RouterLink} from 'angular2/router';
 import {MovieApi} from '../../services/movieApiService';
 import {Movie} from "../../models/movie";
@@ -21,7 +21,7 @@ import {Movie} from "../../models/movie";
             </form>
 
             <div *ng-if="movies">
-                <div *ng-for="#movie of getFilteredMovies()" class="media movie-list-item" [router-link]="['/movieDetails', {movieId: movie.id}]">
+                <div *ng-for="#movie of getFilteredMovies()" class="media movie-list-item" [router-link]="['/MovieDetails', {movieId: movie.id}]">
                     <div class="media-left">
                         <div class="poster-container">
                             <img class="media-object movie-poster" [src]="movie.posterUrl">
@@ -76,9 +76,9 @@ export class Home {
             this.movies = movies;
         });
 
-        //movieApi.getMoviesRx().subscribe(movies => {
-        //    this.movies = movies
-        //});
+        movieApi.getMoviesRx().subscribe(movies => {
+            this.movies = movies
+        });
     }
 
     getFilteredMovies() {

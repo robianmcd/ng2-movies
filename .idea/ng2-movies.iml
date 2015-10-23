@@ -28,8 +28,6 @@
     <orderEntry type="library" name="moment" level="application" />
     <orderEntry type="library" name="http.dev" level="application" />
     <orderEntry type="library" name="system.src" level="application" />
-    <orderEntry type="library" name="angular2" level="application" />
-    <orderEntry type="library" name="http" level="application" />
     <orderEntry type="library" name="system.src" level="application" />
     <orderEntry type="library" name="http.dev" level="application" />
   </component>

@@ -1,8 +1,6 @@
 import {Component, View, CORE_DIRECTIVES} from 'angular2/angular2';
 import {FORM_DIRECTIVES} from 'angular2/core';
 import {RouterLink} from 'angular2/router';
-import {MovieApi} from '../../services/movieApiService';
-import {Movie} from "../../models/movie";
 
 @Component({
     selector: 'home'

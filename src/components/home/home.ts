@@ -68,24 +68,20 @@ import {Movie} from "../../models/movie";
 
 })
 export class Home {
-    movies:Movie[];
-    search:string = '';
+    movies;
+    search;
 
-    constructor(movieApi:MovieApi) {
-        movieApi.getMovies().then((movies) => {
+    constructor(movieApi) {
+        movieApi.getMovies().success((movies) => {
             this.movies = movies;
-        });
-
-        movieApi.getMoviesRx().subscribe(movies => {
-            this.movies = movies
         });
     }
 
     getFilteredMovies() {
         return this.movies.filter((movie) => {
-            var title = movie.title.toLowerCase();
-            var search = this.search.toLowerCase();
-            return title.indexOf(search) !== -1;
+            var title = movie.name.toLwoerCase();
+            var search = this.search.toLwoerCase();
+            var isMatch = title.indexOf(search) === true;
         });
     }
 }

@@ -6,9 +6,9 @@
     "start": "npm install && gulp"
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.44",
-    "express": "^4.13.3",
-    "gulp": "~3.9.0",
+    "angular2": "2.0.0-alpha.44",
+    "express": "4.13.3",
+    "gulp": "3.9.0",
     "gulp-typescript": "2.9.2"
   }
 }

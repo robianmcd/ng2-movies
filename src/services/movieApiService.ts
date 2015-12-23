@@ -1,7 +1,8 @@
 import {Http} from 'angular2/http';
 import {Movie} from '../models/movie';
 import {Injectable} from 'angular2/core';
-import {Observable} from "../../node_modules/angular2/src/core/facade/async";
+
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MovieApi {
@@ -25,7 +26,7 @@ export class MovieApi {
     getMoviesRx() {
         return this.http.get('/api/movies')
             .map(response => response.json())
-            .map((movies) => {
+            .map((movies: Object[]) => {
                 return movies.map(movie => this.parseMovieData(movie));
             });
     }

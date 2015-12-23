@@ -1,4 +1,4 @@
-<div *ng-if="movie">
+<div *ngIf="movie">
     <h1 class="text-center">{{movie.title}}</h1>
     <div class="row">
         <div class="col-xs-5">
@@ -30,7 +30,7 @@
                     <td><strong>Actors</strong></td>
                     <td>
                         <ul class="list-unstyled">
-                            <li *ng-for="#actor of movie.actors">{{actor}}</li>
+                            <li *ngFor="#actor of movie.actors">{{actor}}</li>
                         </ul>
                     </td>
                 </tr>
@@ -43,7 +43,7 @@
     </div>
     <div class="row">
         <div class=buttons>
-            <a class="btn btn-primary" [router-link]="['/Home']">Back</a>
+            <a class="btn btn-primary" [routerLink]="['/Home']">Back</a>
         </div>
     </div>
 </div>

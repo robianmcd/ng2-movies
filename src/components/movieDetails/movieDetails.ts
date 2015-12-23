@@ -1,13 +1,11 @@
-import {Component, View, NgIf, NgFor} from 'angular2/angular2';
+import {Component} from 'angular2/core';
 import {RouteParams, RouterLink} from 'angular2/router';
 import {MovieApi} from '../../services/movieApiService';
 import {Movie} from '../../models/movie';
 
 @Component({
-    selector: 'movieDetails'
-})
-@View({
-    directives: [RouterLink, NgIf, NgFor],
+    selector: 'movieDetails',
+    directives: [RouterLink],
     templateUrl: 'components/movieDetails/movieDetails.html',
     styleUrls: ['components/movieDetails/movieDetails.css']
 })
